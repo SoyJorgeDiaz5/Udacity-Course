@@ -14,17 +14,31 @@
         android:layout_weight="1"/>
 
     <TextView
-        android:hint="City"
+        android:hint="Location offset"
+        android:id="@+id/tv_location_offset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_city"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:hint="Primary location"
+        android:id="@+id/tv_primary_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
     <TextView
         android:hint="Date"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_date"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:hint="Time"
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
 </LinearLayout>

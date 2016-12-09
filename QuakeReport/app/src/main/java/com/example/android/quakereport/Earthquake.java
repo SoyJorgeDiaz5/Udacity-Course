@@ -6,37 +6,37 @@ package com.example.android.quakereport;
 
 public class Earthquake {
 
-    private String magnitude;
-    private String city;
-    private String date;
+    private String mMagnitude;
+    private String mLocation;
+    private long mTime;
 
-    public Earthquake(String magnitude, String city, String date) {
-        this.magnitude = magnitude;
-        this.city = city;
-        this.date = date;
+    public Earthquake(String magnitude, String place, long time) {
+        this.mMagnitude = magnitude;
+        this.mLocation = place;
+        this.mTime = time;
     }
 
     public String getMagnitude() {
-        return magnitude;
+        return mMagnitude;
     }
 
     public void setMagnitude(String magnitude) {
-        this.magnitude = magnitude;
+        this.mMagnitude = magnitude;
     }
 
-    public String getCity() {
-        return city;
+    public String getLocation() {
+        return mLocation;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setLocation(String place) {
+        this.mLocation = place;
     }
 
-    public String getDate() {
-        return date;
+    public long getTime() {
+        return mTime;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setTime(long time) {
+        this.mTime = time;
     }
 }
