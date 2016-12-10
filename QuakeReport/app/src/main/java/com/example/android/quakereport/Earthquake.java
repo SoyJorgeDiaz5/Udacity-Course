@@ -9,11 +9,13 @@ public class Earthquake {
     private float mMagnitude;
     private String mLocation;
     private long mTime;
+    private String mUrl;
 
-    public Earthquake(float magnitude, String place, long time) {
-        this.mMagnitude = magnitude;
-        this.mLocation = place;
-        this.mTime = time;
+    public Earthquake(float magnitude, String place, long time, String url) {
+        mMagnitude = magnitude;
+        mLocation = place;
+        mTime = time;
+        mUrl = url;
     }
 
     public float getMagnitude() {
@@ -21,7 +23,7 @@ public class Earthquake {
     }
 
     public void setMagnitude(float magnitude) {
-        this.mMagnitude = magnitude;
+        mMagnitude = magnitude;
     }
 
     public String getLocation() {
@@ -29,7 +31,7 @@ public class Earthquake {
     }
 
     public void setLocation(String place) {
-        this.mLocation = place;
+        mLocation = place;
     }
 
     public long getTime() {
@@ -37,6 +39,14 @@ public class Earthquake {
     }
 
     public void setTime(long time) {
-        this.mTime = time;
+        mTime = time;
+    }
+
+    public String getUrl() {
+        return mUrl;
+    }
+
+    public void setUrl(String url) {
+        mUrl = url;
     }
 }

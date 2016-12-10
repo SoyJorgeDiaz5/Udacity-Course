@@ -67,7 +67,7 @@ final class QueryUtils {
             // TODO: Parse the response given by the SAMPLE_JSON_RESPONSE string and
             // build up a list of Earthquake objects with the corresponding data.
 
-            JSONObject root = new JSONObject(SAMPLE_JSON_RESPONSE_TEST);
+            JSONObject root = new JSONObject(SAMPLE_JSON_RESPONSE);
 
             JSONArray features = root.getJSONArray("features");
             Log.d("QUERY","getting features...");
@@ -79,11 +79,17 @@ final class QueryUtils {
 
                 JSONObject properties = currentEarthquake.getJSONObject("properties");
 
-                float mag = (float) properties.getDouble("mag");
+                // Extract the value for the key
+                float magnitude = (float) properties.getDouble("mag");
                 String place = properties.getString("place");
                 long time = properties.getLong("time");
+                String url = properties.getString("url");
 
-                earthquakes.add(new Earthquake(mag,place,time));
+                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // and url from the JSON response.
+                Earthquake earthquake = new Earthquake(magnitude, place, time, url);
+
+                earthquakes.add(earthquake);
             }
 
         } catch (JSONException e) {
